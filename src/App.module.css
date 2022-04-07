@@ -1,0 +1,57 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    padding: 20px;
+
+    background-color: #282B33;
+}
+.counterWrapper {
+    width: 400px;
+    max-height: 100%;
+
+    border: 2px solid #74C4CD;
+    border-radius: 20px;
+}
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #74C4CD;
+    font-weight: bold;
+    font-size: 80px;
+
+    height: 10rem;
+    margin: 30px;
+
+    border: 2px solid #74C4CD;
+    border-radius: 10px;
+}
+.btnWrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 30px;
+    padding: 10px 0;
+
+    border: 2px solid #74C4CD;
+    border-radius: 10px;
+}
+.btn {
+    background-color: #74C4CD;
+    font-weight: bold;
+    font-size: 20px;
+
+    padding: 3px 10px;
+
+    border: none;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: cyan;
+    transition: 0.1s linear;
+}
