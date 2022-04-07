@@ -5,12 +5,11 @@ import s from './App.module.css'
 
 function App() {
 
-
     let [value, setValue] = useState(0)
 
     let increaseCounter = () => {
-        ++value
-        setValue(value)
+            ++value
+            setValue(value)
     }
 
     const resetCounter = () => {

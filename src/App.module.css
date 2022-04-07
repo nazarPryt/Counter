@@ -31,6 +31,21 @@
     border: 2px solid #74C4CD;
     border-radius: 10px;
 }
+.displayRed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: red;
+    font-weight: bold;
+    font-size: 80px;
+
+    height: 10rem;
+    margin: 30px;
+
+    border: 2px solid #74C4CD;
+    border-radius: 10px;
+}
 .btnWrapper {
     display: flex;
     justify-content: space-evenly;
@@ -54,4 +69,7 @@
 .btn:hover{
     background-color: cyan;
     transition: 0.1s linear;
+}
+.btn:disabled{
+    background: #D4D4D4;
 }

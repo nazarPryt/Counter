@@ -5,6 +5,7 @@ import s from './App.module.css'
 type btnType = {
     name: string
     onClickFunction: () => void
+    isBtnDisable: boolean
 }
 
 function Btn (props: btnType) {
@@ -13,7 +14,7 @@ function Btn (props: btnType) {
         props.onClickFunction()
     }
 
-    return <button className={s.btn} onClick={btnClickHandler}>{props.name}</button>
+    return <button disabled={props.isBtnDisable} className={s.btn} onClick={btnClickHandler}>{props.name}</button>
 
 };
 

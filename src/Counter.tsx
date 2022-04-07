@@ -1,6 +1,7 @@
 import React from 'react';
 import Btn from "./Btn";
 import s from './App.module.css'
+import Display from "./Display";
 
 
 type CounterType = {
@@ -10,12 +11,16 @@ type CounterType = {
 }
 
 function Counter (props: CounterType) {
+
+    const incBtnDisabler = props.initialState === 5;
+    const resetBtnDisabler = props.initialState !== 5;
+
     return (
         <div className={s.counterWrapper}>
-            <div className={s.display}>{props.initialState}</div>
+            <Display initialState={props.initialState}/>
             <div className={s.btnWrapper}>
-                <Btn onClickFunction={props.increaseCounter} name={'inc'}/>
-                <Btn onClickFunction={props.resetCounter} name={'reset'}/>
+                <Btn isBtnDisable={incBtnDisabler} onClickFunction={props.increaseCounter} name={'inc'}/>
+                <Btn isBtnDisable={resetBtnDisabler} onClickFunction={props.resetCounter} name={'reset'}/>
             </div>
         </div>
     );
