@@ -8,19 +8,22 @@ type CounterType = {
     increaseCounter: () => void
     resetCounter: () => void
     initialState: number
+    changeDisplay: any
 }
 
 function Counter (props: CounterType) {
 
     const incBtnDisabler = props.initialState === 5;
     const resetBtnDisabler = props.initialState !== 5;
+    const changeDisplayHandler = false
 
     return (
         <div className={s.counterWrapper}>
             <Display initialState={props.initialState}/>
             <div className={s.btnWrapper}>
-                <Btn isBtnDisable={incBtnDisabler} onClickFunction={props.increaseCounter} name={'inc'}/>
-                <Btn isBtnDisable={resetBtnDisabler} onClickFunction={props.resetCounter} name={'reset'}/>
+                <Btn isBtnDisable={incBtnDisabler} onClickFunction={props.increaseCounter} name={'Inc'}/>
+                <Btn isBtnDisable={resetBtnDisabler} onClickFunction={props.resetCounter} name={'Reset'}/>
+                <Btn isBtnDisable={changeDisplayHandler} onClickFunction={props.changeDisplay} name={'Set'}/>
             </div>
         </div>
     );
