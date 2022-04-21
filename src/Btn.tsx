@@ -5,7 +5,7 @@ import s from './App.module.css'
 type btnType = {
     name: string
     onClickFunction: () => void
-    isBtnDisable: boolean
+    isBtnDisable?: boolean
 }
 
 function Btn (props: btnType) {
